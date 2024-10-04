@@ -1,0 +1,51 @@
+.cats-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .cat-item {
+    width: 100%; /* Adjust to 80% of the container */
+    max-width: 300px; /* Optional limit for larger screens */
+    margin: 10px;
+    flex-basis: 100%;
+    text-align: center;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cat-item img {
+    width: 25rem;
+    height: 100%;
+    border-radius: 8px;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  
+  /* For small screens (e.g., phones), show 1 item per row */
+  @media (max-width: 767px) {
+    .cat-item {
+      flex-basis: 100%; /* 1 item per row on small screens */
+    }
+  }
+  
+  /* For medium and larger screens, show 3 items per row */
+  @media (min-width: 768px) {
+    .cat-item {
+      flex-basis: calc(33.33% - 20px); /* 3 items per row on larger screens */
+    }
+  }
+  
+  
